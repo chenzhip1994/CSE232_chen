@@ -12,7 +12,7 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
     }
 
 
-    public  LinkedList<Node> root(String fn) {
+    public  LinkedList<Node> LoadXMLFile(String fn) {
         LinkedList<Node> nodes = new LinkedList<>();
         try {
             // Remove quotes (first and last character)
@@ -26,7 +26,7 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
             doc.getDocumentElement().normalize();
             nodes.add(doc);
         } catch (Exception e) {
-            return new LinkedList<Node>();
+            return new LinkedList<>();
         }
         return nodes;
     }
@@ -195,7 +195,7 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
      */
     @Override
     public LinkedList<Node> visitApDoc(XPathParser.ApDocContext ctx) {
-        LinkedList<Node> res = root(ctx.FPath().getText());
+        LinkedList<Node> res = LoadXMLFile(ctx.FPath().getText());
         cur = res;
         return res;
 
@@ -376,9 +376,8 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
     /**
      * rp                           # FltRp
      * Note: filter functions should not change the current list of nodes
-     * @param ctx Current parse tree context
-     * @return Current list of nodes if the relative path is not empty
-     * - an empty list otherwise
+     * @param
+     * @return
      */
     @Override
     public LinkedList<Node> visitFltRp(XPathParser.FltRpContext ctx) {
@@ -392,10 +391,8 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
      * rp '=' rp                    # FltEqual
      * rp 'eq' rp                   # FltEqual
      * Note: filter functions should not change the current list of nodes
-     * @param ctx Current parse tree context
-     * @return Current list of nodes if there exists some x in the first relative path
-     * and some y in the second relative path that are equal
-     * - an empty list otherwise
+     * @param
+     * @return
      */
     @Override
     public LinkedList<Node> visitFltEqual(XPathParser.FltEqualContext ctx) {
@@ -414,10 +411,8 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
      * rp '==' rp                   # FltIs
      * rp 'is' rp                   # FltIsfunctions should not change the current list of nodes
      *
-     * @param ctx Current parse tree context
-     * @return Current list of nodes if there exists some x in the first relative path
-     * and some y in the second relative path that reference the same node
-     * - an empty list otherwise
+     * @param
+     * @return
      */
     @Override
     public LinkedList<Node> visitFltIs(XPathParser.FltIsContext ctx) {
@@ -435,8 +430,8 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
     /**
      *
      * '(' filter ')'               # FltwithP
-     * @param ctx Current parse tree context
-     * @return List of nodes returned by the filter inside the parentheses
+     * @param
+     * @return
      */
     @Override
     public LinkedList<Node>  visitFltwithP(XPathParser.FltwithPContext ctx){
@@ -445,9 +440,8 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
 
     /**
      * filter 'and' filter          # FltAnd
-     * @param ctx Current parse tree context
-     * @return Current list of nodes if both of the filters evaluate to true
-     * - an empty list otherwise
+     * @param
+     * @return
      */
     @Override
     public LinkedList<Node> visitFltAnd(XPathParser.FltAndContext ctx) {
@@ -460,9 +454,8 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
     /**
      * filter 'or' filter           # FltOr
      * Note: filter functions should not change the current list of nodes
-     * @param ctx Current parse tree context
-     * @return Current list of nodes if any of the filters evaluates to true
-     * - an empty list otherwise
+     * @param
+     * @return
      */
     @Override
     public LinkedList<Node> visitFltOr(XPathParser.FltOrContext ctx) {
@@ -475,9 +468,8 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
     /**
      * 'not' filter                 # FltNot
      * Note: filter functions should not change the current list of nodes
-     * @param ctx Current parse tree context
-     * @return Current list of nodes if the filter evaluates to false
-     * - an empty list otherwise
+     * @param
+     * @return
      */
     @Override
     public LinkedList<Node> visitFltNot(XPathParser.FltNotContext ctx) {
