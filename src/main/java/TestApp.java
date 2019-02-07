@@ -15,7 +15,11 @@ public class TestApp {
         try {
             String inputFilePath = "/Users/patrickchen/Desktop/CSE232/j_caesar/input.txt";
             FileInputStream input = new FileInputStream(inputFilePath);
-            LinkedList<Node> res = Query(new ANTLRInputStream(input));
+            ANTLRInputStream antlrStr = new ANTLRInputStream (input);
+            LinkedList<Node> res = Query(antlrStr);
+            if(res.size()<=0){
+                System.out.println("enpty result");
+            }
             for(Node node : res){
                 System.out.println(node.toString());
             }

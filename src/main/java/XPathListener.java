@@ -7,28 +7,6 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface XPathListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by the {@code ApDoc}
-	 * labeled alternative in {@link XPathParser#doc}.
-	 * @param ctx the parse tree
-	 */
-	void enterApDoc(XPathParser.ApDocContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code ApDoc}
-	 * labeled alternative in {@link XPathParser#doc}.
-	 * @param ctx the parse tree
-	 */
-	void exitApDoc(XPathParser.ApDocContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link XPathParser#fname}.
-	 * @param ctx the parse tree
-	 */
-	void enterFname(XPathParser.FnameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link XPathParser#fname}.
-	 * @param ctx the parse tree
-	 */
-	void exitFname(XPathParser.FnameContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code ApChildren}
 	 * labeled alternative in {@link XPathParser#ap}.
 	 * @param ctx the parse tree
@@ -52,6 +30,18 @@ public interface XPathListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitApAll(XPathParser.ApAllContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code ApDoc}
+	 * labeled alternative in {@link XPathParser#doc}.
+	 * @param ctx the parse tree
+	 */
+	void enterApDoc(XPathParser.ApDocContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code ApDoc}
+	 * labeled alternative in {@link XPathParser#doc}.
+	 * @param ctx the parse tree
+	 */
+	void exitApDoc(XPathParser.ApDocContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code AllChildren}
 	 * labeled alternative in {@link XPathParser#rp}.

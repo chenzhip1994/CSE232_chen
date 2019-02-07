@@ -1,16 +1,12 @@
 grammar XPath;
 
-doc
-	: DOC '(' '"' fname '"' ')'       #ApDoc
-	;
-
-fname
-	: NAME ('.' NAME)?
-	;
-
 ap
 	: doc '/' rp                  # ApChildren
 	| doc '//' rp                 # ApAll
+	;
+
+doc
+	: 'doc' '(' FPath ')'     #ApDoc
 	;
 
 rp
@@ -18,7 +14,7 @@ rp
 	| '.'                          # Current     /* ok */
 	| '..'                         # Parent        /*ok*/
 	| '*'                          # AllChildren     /*ok*/
-	| TXT                          # Txt              /*ok*/
+	| 'text()'                     # Txt              /*ok*/
 	| '@' NAME                     # Attribute               /*ok*/
 	| '(' rp ')'                   # RpwithP           /*ok*/
 	| rp '/' rp                    # RpChildren        /*ok*/
@@ -39,8 +35,8 @@ filter
 	| 'not' filter                 # FltNot
 	;
 
-
+FPath : '"' (~'"')* '"';
 DOC: 'doc' ;
-TXT: 'text()';
+//TXT: 'text()';
 NAME: [a-zA-Z0-9_-]+;
 WhiteSpace : [\r\t]+ -> skip;

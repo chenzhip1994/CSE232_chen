@@ -10,19 +10,6 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface XPathVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by the {@code ApDoc}
-	 * labeled alternative in {@link XPathParser#doc}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitApDoc(XPathParser.ApDocContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link XPathParser#fname}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFname(XPathParser.FnameContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code ApChildren}
 	 * labeled alternative in {@link XPathParser#ap}.
 	 * @param ctx the parse tree
@@ -36,6 +23,13 @@ public interface XPathVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitApAll(XPathParser.ApAllContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ApDoc}
+	 * labeled alternative in {@link XPathParser#doc}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitApDoc(XPathParser.ApDocContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code AllChildren}
 	 * labeled alternative in {@link XPathParser#rp}.
