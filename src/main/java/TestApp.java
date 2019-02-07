@@ -25,10 +25,10 @@ public class TestApp {
     public void run(String[] args){
         try {
             String inputFilePath = "input.txt";
-            if(args.length > 1){
+            if(args.length > 0){
                 inputFilePath = args[0];
             }else{
-                System.out.println("use default input file");
+                System.out.println("use default input file, input.txt");
             }
             System.out.println("input file: "+ inputFilePath);
             FileInputStream input = new FileInputStream(inputFilePath);

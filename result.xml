@@ -1,21 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <root>
-  <TITLE>SCENE I.  Rome. A street.</TITLE>
-  <TITLE>SCENE II.  A public place.</TITLE>
-  <TITLE>SCENE III.  The same. A street.</TITLE>
-  <TITLE>SCENE I.  Rome. BRUTUS's orchard.</TITLE>
-  <TITLE>SCENE II.  CAESAR's house.</TITLE>
-  <TITLE>SCENE III.  A street near the Capitol.</TITLE>
-  <TITLE>SCENE IV.  Another part of the same street, before the house of BRUTUS.</TITLE>
-  <TITLE>SCENE I.  Rome. Before the Capitol; the Senate sitting above.</TITLE>
-  <TITLE>SCENE II.  The Forum.</TITLE>
-  <TITLE>SCENE III.  A street.</TITLE>
-  <TITLE>SCENE I.  A house in Rome.</TITLE>
-  <TITLE>SCENE II.  Camp near Sardis. Before BRUTUS's tent.</TITLE>
-  <TITLE>SCENE III.  Brutus's tent.</TITLE>
-  <TITLE>SCENE I.  The plains of Philippi.</TITLE>
-  <TITLE>SCENE II.  The same. The field of battle.</TITLE>
-  <TITLE>SCENE III.  Another part of the field.</TITLE>
-  <TITLE>SCENE IV.  Another part of the field.</TITLE>
-  <TITLE>SCENE V.  Another part of the field.</TITLE>
+  <PGROUP>
+    <PERSONA>OCTAVIUS CAESAR</PERSONA>
+    <PERSONA>MARCUS ANTONIUS</PERSONA>
+    <PERSONA>M. AEMILIUS LEPIDUS</PERSONA>
+    <GRPDESCR>triumvirs after death of Julius Caesar.</GRPDESCR>
+  </PGROUP>
+  <PGROUP>
+    <PERSONA>CICERO</PERSONA>
+    <PERSONA>PUBLIUS</PERSONA>
+    <PERSONA>POPILIUS LENA</PERSONA>
+    <GRPDESCR>senators.</GRPDESCR>
+  </PGROUP>
+  <PGROUP>
+    <PERSONA>MARCUS BRUTUS</PERSONA>
+    <PERSONA>CASSIUS</PERSONA>
+    <PERSONA>CASCA</PERSONA>
+    <PERSONA>TREBONIUS</PERSONA>
+    <PERSONA>LIGARIUS</PERSONA>
+    <PERSONA>DECIUS BRUTUS</PERSONA>
+    <PERSONA>METELLUS CIMBER</PERSONA>
+    <PERSONA>CINNA</PERSONA>
+    <GRPDESCR>conspirators against Julius Caesar.</GRPDESCR>
+  </PGROUP>
+  <PGROUP>
+    <PERSONA>FLAVIUS</PERSONA>
+    <PERSONA>MARULLUS</PERSONA>
+    <GRPDESCR>tribunes.</GRPDESCR>
+  </PGROUP>
+  <PGROUP>
+    <PERSONA>LUCILIUS</PERSONA>
+    <PERSONA>TITINIUS</PERSONA>
+    <PERSONA>MESSALA</PERSONA>
+    <PERSONA>Young CATO</PERSONA>
+    <PERSONA>VOLUMNIUS</PERSONA>
+    <GRPDESCR>friends to Brutus and Cassius.</GRPDESCR>
+  </PGROUP>
+  <PGROUP>
+    <PERSONA>VARRO</PERSONA>
+    <PERSONA>CLITUS</PERSONA>
+    <PERSONA>CLAUDIUS</PERSONA>
+    <PERSONA>STRATO</PERSONA>
+    <PERSONA>LUCIUS</PERSONA>
+    <PERSONA>DARDANIUS</PERSONA>
+    <GRPDESCR>servants to Brutus.</GRPDESCR>
+  </PGROUP>
 </root>
