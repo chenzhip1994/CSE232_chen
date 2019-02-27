@@ -1,3 +1,8 @@
+package XPath;
+
+import Antlr.XPathLexer;
+import Antlr.XPathParser;
+import XPath.XPathMyVisitor;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -18,10 +23,10 @@ import java.io.FileInputStream;
 import java.util.LinkedList;
 
 public class TestApp {
+
     public static void main(String[] args) {
         new TestApp().run(args);
     }
-
     public void run(String[] args){
         try {
             String inputFilePath = "input.txt";
