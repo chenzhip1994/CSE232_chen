@@ -2,7 +2,6 @@ package XPath;
 
 import Antlr.XPathLexer;
 import Antlr.XPathParser;
-import XPath.XPathMyVisitor;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;

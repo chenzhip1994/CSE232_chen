@@ -1,4 +1,4 @@
-// Generated from XQuery.g4 by ANTLR 4.7.1
+package Antlr;// Generated from XQuery.g4 by ANTLR 4.7.1
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -6,284 +6,6 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  * {@link XQueryParser}.
  */
 public interface XQueryListener extends ParseTreeListener {
-	/**
-	 * Enter a parse tree produced by the {@code XqAp}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void enterXqAp(XQueryParser.XqApContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code XqAp}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void exitXqAp(XQueryParser.XqApContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code XqTwoXq}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void enterXqTwoXq(XQueryParser.XqTwoXqContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code XqTwoXq}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void exitXqTwoXq(XQueryParser.XqTwoXqContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code XqAll}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void enterXqAll(XQueryParser.XqAllContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code XqAll}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void exitXqAll(XQueryParser.XqAllContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code XqJoin}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void enterXqJoin(XQueryParser.XqJoinContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code XqJoin}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void exitXqJoin(XQueryParser.XqJoinContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code XqVariable}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void enterXqVariable(XQueryParser.XqVariableContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code XqVariable}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void exitXqVariable(XQueryParser.XqVariableContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code XqwithP}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void enterXqwithP(XQueryParser.XqwithPContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code XqwithP}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void exitXqwithP(XQueryParser.XqwithPContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code XqFLWR}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void enterXqFLWR(XQueryParser.XqFLWRContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code XqFLWR}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void exitXqFLWR(XQueryParser.XqFLWRContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code XqConstant}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void enterXqConstant(XQueryParser.XqConstantContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code XqConstant}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void exitXqConstant(XQueryParser.XqConstantContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code XqTag}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void enterXqTag(XQueryParser.XqTagContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code XqTag}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void exitXqTag(XQueryParser.XqTagContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code XqLet}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void enterXqLet(XQueryParser.XqLetContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code XqLet}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void exitXqLet(XQueryParser.XqLetContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code XqRp}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void enterXqRp(XQueryParser.XqRpContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code XqRp}
-	 * labeled alternative in {@link XQueryParser#xq}.
-	 * @param ctx the parse tree
-	 */
-	void exitXqRp(XQueryParser.XqRpContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link XQueryParser#forClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterForClause(XQueryParser.ForClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link XQueryParser#forClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitForClause(XQueryParser.ForClauseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link XQueryParser#letClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterLetClause(XQueryParser.LetClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link XQueryParser#letClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitLetClause(XQueryParser.LetClauseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link XQueryParser#whereClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterWhereClause(XQueryParser.WhereClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link XQueryParser#whereClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitWhereClause(XQueryParser.WhereClauseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link XQueryParser#returnClause}.
-	 * @param ctx the parse tree
-	 */
-	void enterReturnClause(XQueryParser.ReturnClauseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link XQueryParser#returnClause}.
-	 * @param ctx the parse tree
-	 */
-	void exitReturnClause(XQueryParser.ReturnClauseContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link XQueryParser#tagList}.
-	 * @param ctx the parse tree
-	 */
-	void enterTagList(XQueryParser.TagListContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link XQueryParser#tagList}.
-	 * @param ctx the parse tree
-	 */
-	void exitTagList(XQueryParser.TagListContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code CondIdentityEqual}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void enterCondIdentityEqual(XQueryParser.CondIdentityEqualContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code CondIdentityEqual}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void exitCondIdentityEqual(XQueryParser.CondIdentityEqualContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code CondWithP}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void enterCondWithP(XQueryParser.CondWithPContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code CondWithP}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void exitCondWithP(XQueryParser.CondWithPContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code CondOr}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void enterCondOr(XQueryParser.CondOrContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code CondOr}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void exitCondOr(XQueryParser.CondOrContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code CondAnd}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void enterCondAnd(XQueryParser.CondAndContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code CondAnd}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void exitCondAnd(XQueryParser.CondAndContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code CondValueEqual}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void enterCondValueEqual(XQueryParser.CondValueEqualContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code CondValueEqual}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void exitCondValueEqual(XQueryParser.CondValueEqualContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code CondEmpty}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void enterCondEmpty(XQueryParser.CondEmptyContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code CondEmpty}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void exitCondEmpty(XQueryParser.CondEmptyContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code CondSome}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void enterCondSome(XQueryParser.CondSomeContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code CondSome}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void exitCondSome(XQueryParser.CondSomeContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code CondNot}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void enterCondNot(XQueryParser.CondNotContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code CondNot}
-	 * labeled alternative in {@link XQueryParser#cond}.
-	 * @param ctx the parse tree
-	 */
-	void exitCondNot(XQueryParser.CondNotContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code ApChildren}
 	 * labeled alternative in {@link XQueryParser#ap}.
@@ -536,4 +258,260 @@ public interface XQueryListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFltwithP(XQueryParser.FltwithPContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code XqAp}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void enterXqAp(XQueryParser.XqApContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code XqAp}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void exitXqAp(XQueryParser.XqApContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code XqTwoXq}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void enterXqTwoXq(XQueryParser.XqTwoXqContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code XqTwoXq}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void exitXqTwoXq(XQueryParser.XqTwoXqContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code XqAll}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void enterXqAll(XQueryParser.XqAllContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code XqAll}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void exitXqAll(XQueryParser.XqAllContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code XqVariable}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void enterXqVariable(XQueryParser.XqVariableContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code XqVariable}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void exitXqVariable(XQueryParser.XqVariableContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code XqwithP}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void enterXqwithP(XQueryParser.XqwithPContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code XqwithP}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void exitXqwithP(XQueryParser.XqwithPContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code XqFLWR}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void enterXqFLWR(XQueryParser.XqFLWRContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code XqFLWR}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void exitXqFLWR(XQueryParser.XqFLWRContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code XqConstant}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void enterXqConstant(XQueryParser.XqConstantContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code XqConstant}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void exitXqConstant(XQueryParser.XqConstantContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code XqTag}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void enterXqTag(XQueryParser.XqTagContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code XqTag}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void exitXqTag(XQueryParser.XqTagContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code XqLet}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void enterXqLet(XQueryParser.XqLetContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code XqLet}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void exitXqLet(XQueryParser.XqLetContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code XqRp}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void enterXqRp(XQueryParser.XqRpContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code XqRp}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void exitXqRp(XQueryParser.XqRpContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link XQueryParser#forClause}.
+	 * @param ctx the parse tree
+	 */
+	void enterForClause(XQueryParser.ForClauseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link XQueryParser#forClause}.
+	 * @param ctx the parse tree
+	 */
+	void exitForClause(XQueryParser.ForClauseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link XQueryParser#letClause}.
+	 * @param ctx the parse tree
+	 */
+	void enterLetClause(XQueryParser.LetClauseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link XQueryParser#letClause}.
+	 * @param ctx the parse tree
+	 */
+	void exitLetClause(XQueryParser.LetClauseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link XQueryParser#whereClause}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhereClause(XQueryParser.WhereClauseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link XQueryParser#whereClause}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhereClause(XQueryParser.WhereClauseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link XQueryParser#returnClause}.
+	 * @param ctx the parse tree
+	 */
+	void enterReturnClause(XQueryParser.ReturnClauseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link XQueryParser#returnClause}.
+	 * @param ctx the parse tree
+	 */
+	void exitReturnClause(XQueryParser.ReturnClauseContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code CondIdentityEqual}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void enterCondIdentityEqual(XQueryParser.CondIdentityEqualContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code CondIdentityEqual}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void exitCondIdentityEqual(XQueryParser.CondIdentityEqualContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code CondWithP}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void enterCondWithP(XQueryParser.CondWithPContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code CondWithP}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void exitCondWithP(XQueryParser.CondWithPContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code CondOr}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void enterCondOr(XQueryParser.CondOrContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code CondOr}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void exitCondOr(XQueryParser.CondOrContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code CondAnd}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void enterCondAnd(XQueryParser.CondAndContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code CondAnd}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void exitCondAnd(XQueryParser.CondAndContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code CondValueEqual}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void enterCondValueEqual(XQueryParser.CondValueEqualContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code CondValueEqual}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void exitCondValueEqual(XQueryParser.CondValueEqualContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code CondEmpty}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void enterCondEmpty(XQueryParser.CondEmptyContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code CondEmpty}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void exitCondEmpty(XQueryParser.CondEmptyContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code CondSome}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void enterCondSome(XQueryParser.CondSomeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code CondSome}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void exitCondSome(XQueryParser.CondSomeContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code CondNot}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void enterCondNot(XQueryParser.CondNotContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code CondNot}
+	 * labeled alternative in {@link XQueryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void exitCondNot(XQueryParser.CondNotContext ctx);
 }

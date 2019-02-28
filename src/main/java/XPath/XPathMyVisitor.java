@@ -3,8 +3,10 @@ package XPath;
 import java.io.File;
 import java.util.*;
 import javax.xml.parsers.*;
+
+import Antlr.XPathBaseVisitor;
+import Antlr.XPathParser;
 import org.w3c.dom.*;
-import Antlr.*;
 
 
 public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
@@ -16,7 +18,7 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
     }
 
 
-    public  LinkedList<Node> LoadXMLFile(String fn) {
+    public static  LinkedList<Node> LoadXMLFile(String fn) {
         LinkedList<Node> nodes = new LinkedList<>();
         try {
             // Remove quotes (first and last character)
@@ -38,10 +40,10 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
 
     /**
      * get all the children of node n. Convert the NodeList to LinkedList of node;
-     * @param dom node n
+     * @param
      * @return a List of the children
      */
-    public LinkedList<Node> getChildren(Node n){
+    public static LinkedList<Node> getChildren(Node n){
         LinkedList<Node> children = new LinkedList<>();
         NodeList l = n.getChildNodes();
         for(int i=0;i<l.getLength();i++){
@@ -50,7 +52,7 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
         return children;
     }
 
-    public LinkedList<Node>  getTxt(Node n) {
+    public static LinkedList<Node>  getTxt(Node n) {
         LinkedList<Node> res = new LinkedList<>();
         LinkedList<Node> children = getChildren(n);
         for (Node c : children) {
@@ -62,7 +64,7 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
     }
 
 
-    public  LinkedList<Node> getAttrib(Node n, String attName) {
+    public  static LinkedList<Node> getAttrib(Node n, String attName) {
         LinkedList<Node> nodes = new LinkedList<>();
         if (n.getNodeType() != Node.ELEMENT_NODE) {
             return nodes;
@@ -76,7 +78,7 @@ public class XPathMyVisitor extends XPathBaseVisitor<LinkedList<Node>> {
     }
 
 
-    public LinkedList<Node>  descendantsOrSelves(LinkedList<Node> nodes) {
+    public static LinkedList<Node>  descendantsOrSelves(LinkedList<Node> nodes) {
         LinkedList<Node> res = new LinkedList<>();
         LinkedList<Node> q = new LinkedList<>();
         q.addAll(nodes);

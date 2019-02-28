@@ -1,17 +1,57 @@
 grammar XQuery;
-import XPath;
+//import XPath;
+
+ap
+	: doc '/' rp                  # ApChildren
+	| doc '//' rp                 # ApAll
+	;
+
+doc
+	: 'doc' '(' StringConstant ')'     #ApDoc
+	;
+
+rp
+	: NAME                          # TagName     /* 一定出现在最后，属于递归结束的环节* ok */
+	| '.'                          # Current     /* ok */
+	| '..'                         # Parent        /*ok*/
+	| '*'                          # AllChildren     /*ok*/
+	| 'text()'                     # Txt              /*ok*/
+	| '@' NAME                     # Attribute               /*ok*/
+	| '(' rp ')'                   # RpwithP           /*ok*/
+	| rp '/' rp                    # RpChildren        /*ok*/
+	| rp '//' rp                   # RpAll             /*ok*/
+	| rp '[' filter ']'            # RpFilter           /*ok*/
+	| rp ',' rp                    # TwoRp             /*ok*/
+	;
+
+filter
+	: rp                           # FltRp
+	| rp '=' rp                    # FltEqual
+	| rp 'eq' rp                   # FltEqual
+	| rp '==' rp                   # FltIs
+	| rp 'is' rp                   # FltIs
+	| '(' filter ')'               # FltwithP
+	| filter 'and' filter          # FltAnd
+	| filter 'or' filter           # FltOr
+	| 'not' filter                 # FltNot
+	;
+
+
+DOC: 'doc' ;
+//TXT: 'text()';
+NAME: [a-zA-Z0-9_-]+;
+
 
 // XQuery
 xq
     : Variable                                                                 # XqVariable
-    | StringConstant                                                                    # XqConstant
+    | StringConstant                                                           # XqConstant
     | ap                                                                       # XqAp
     | '(' xq ')'                                                               # XqwithP
     | xq '/' rp                                                                # XqRp
     | xq '//' rp                                                               # XqAll
     | xq ',' xq                                                                # XqTwoXq
     | '<' NAME '>' '{' xq '}' '</' NAME '>'                                    # XqTag
-    | 'join' '(' xq ',' xq ',' tagList ',' tagList ')'                         # XqJoin
     | letClause xq                                                             # XqLet
     | forClause letClause? whereClause? returnClause                           # XqFLWR
     ;
@@ -36,10 +76,6 @@ returnClause
     : 'return' xq
     ;
 
-// Tag List
-tagList
-    : '[' (NAME (',' NAME)*)? ']'
-    ;
 
 // Condition
 cond
@@ -56,3 +92,5 @@ cond
 // Variable Name
 StringConstant: '"' (~'"')* '"';
 Variable: '$' NAME;
+// Ignore White Space
+WhiteSpace: [ \n\t\r]+ -> skip;

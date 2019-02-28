@@ -92,7 +92,7 @@ public class XPathLexer extends Lexer {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "XPath.g4"; }
+	public String getGrammarFileName() { return "Antlr/XPath.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
