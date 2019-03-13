@@ -1,4 +1,5 @@
-package Antlr;// Generated from XQuery.g4 by ANTLR 4.7.1
+// Generated from C:/Users/54440/Documents/CSE232_Project/CSE232_chen/src/main/java/Antlr\XQuery.g4 by ANTLR 4.7.2
+package Antlr;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -184,6 +185,13 @@ public class XQueryBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitXqJoin(XQueryParser.XqJoinContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitXqVariable(XQueryParser.XqVariableContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
@@ -311,4 +319,11 @@ public class XQueryBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitCondNot(XQueryParser.CondNotContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitTList(XQueryParser.TListContext ctx) { return visitChildren(ctx); }
 }

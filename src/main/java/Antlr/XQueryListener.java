@@ -1,4 +1,5 @@
-package Antlr;// Generated from XQuery.g4 by ANTLR 4.7.1
+// Generated from C:/Users/54440/Documents/CSE232_Project/CSE232_chen/src/main/java/Antlr\XQuery.g4 by ANTLR 4.7.2
+package Antlr;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -295,6 +296,18 @@ public interface XQueryListener extends ParseTreeListener {
 	 */
 	void exitXqAll(XQueryParser.XqAllContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code XqJoin}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void enterXqJoin(XQueryParser.XqJoinContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code XqJoin}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 */
+	void exitXqJoin(XQueryParser.XqJoinContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code XqVariable}
 	 * labeled alternative in {@link XQueryParser#xq}.
 	 * @param ctx the parse tree
@@ -514,4 +527,14 @@ public interface XQueryListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitCondNot(XQueryParser.CondNotContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link XQueryParser#tList}.
+	 * @param ctx the parse tree
+	 */
+	void enterTList(XQueryParser.TListContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link XQueryParser#tList}.
+	 * @param ctx the parse tree
+	 */
+	void exitTList(XQueryParser.TListContext ctx);
 }

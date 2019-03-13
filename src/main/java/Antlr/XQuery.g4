@@ -54,6 +54,7 @@ xq
     | '<' NAME '>' '{' xq '}' '</' NAME '>'                                    # XqTag
     | letClause xq                                                             # XqLet
     | forClause letClause? whereClause? returnClause                           # XqFLWR
+    | 'join' '(' xq ',' xq ',' tList ',' tList ')'                           # XqJoin
     ;
 
 // For Clause
@@ -94,3 +95,4 @@ StringConstant: '"' (~'"')* '"';
 Variable: '$' NAME;
 // Ignore White Space
 WhiteSpace: [ \n\t\r]+ -> skip;
+tList : '[' NAME (',' NAME)* ']' ;
