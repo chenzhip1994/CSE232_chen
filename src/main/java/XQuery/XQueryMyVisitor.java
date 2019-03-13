@@ -4,8 +4,10 @@ import java.util.*;
 
 import Antlr.XQueryBaseVisitor;
 import Antlr.XQueryParser;
+import org.antlr.v4.runtime.tree.TerminalNode;
 import org.w3c.dom.*;
 import XPath.*;
+import sun.awt.image.ImageWatched;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -786,6 +788,72 @@ The following part is the xpath function
             return this.cur;
         }
         return new LinkedList<>();
+    }
+
+    /**
+     * miletone3, an extension of my milestone 2 evaluation engine that supports input queries with the join keyword.
+     * The join is implemented using a hash join algorithm as discussed in class.
+     * @param
+     * @return
+     */
+
+    String findKey(Node N,LinkedList<String> Nt){
+        LinkedList<Node> children = XPathUtils.getChildren(N);
+        String key = "";
+        for(String nt:Nt){
+            for(Node child:children){
+                if(child.getNodeName().equals(nt)){
+                    key += xUtils.convertNodeToHtml(child);
+                }
+            }
+        }
+        return key;
+    }
+
+    @Override
+    public LinkedList<Node> visitXqJoin(XQueryParser.XqJoinContext ctx) {
+        LinkedList<Node> ans = new LinkedList<>();
+        HashMap<String, LinkedList<Node>> IDtoXq = new HashMap<>();
+        LinkedList<Node> cpcur = new LinkedList<>(this.cur);
+        LinkedList<Node> R = visit(ctx.xq(0));
+        this.cur = cpcur;
+        LinkedList<Node> S = visit(ctx.xq(1));
+
+        int tsize = ctx.tList(0).NAME().size();
+        if(tsize != ctx.tList(1).NAME().size()){
+            // print error!
+        }
+        LinkedList<String> Rt = new LinkedList<>();
+        LinkedList<String> St = new LinkedList<>();
+        for(int i = 0; i<tsize; i++){
+            Rt.add(ctx.tList(0).NAME(i).getText());
+            St.add(ctx.tList(1).NAME(i).getText());
+        }
+
+        // Add S to hash table
+        for (Node s : S){
+            String key = findKey(s,St);
+            IDtoXq.putIfAbsent(key, new LinkedList<>());
+            IDtoXq.get(key).add(s);
+        }
+
+        for (Node r:R){
+            // check if r and s have the same key
+            String key = findKey(r,Rt);
+            if( IDtoXq.containsKey(key)){
+                // DO join
+                LinkedList<Node> rs = IDtoXq.get(key);
+                for (Node l : rs) {
+                    LinkedList<Node> res = new LinkedList<>();
+                    res.addAll(XPathUtils.getChildren(r));
+                    res.addAll(XPathUtils.getChildren(l));
+                    ans.add(xUtils.makeElement(r.getNodeName(), res));
+                }
+            }
+        }
+        this.cur = ans;
+        return this.cur;
+
     }
 
 

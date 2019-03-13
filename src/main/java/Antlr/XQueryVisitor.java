@@ -1,4 +1,5 @@
-package Antlr;// Generated from XQuery.g4 by ANTLR 4.7.1
+// Generated from C:/Users/54440/Documents/CSE232_Project/CSE232_chen/src/main/java/Antlr\XQuery.g4 by ANTLR 4.7.2
+package Antlr;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -178,6 +179,13 @@ public interface XQueryVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitXqAll(XQueryParser.XqAllContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code XqJoin}
+	 * labeled alternative in {@link XQueryParser#xq}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitXqJoin(XQueryParser.XqJoinContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code XqVariable}
 	 * labeled alternative in {@link XQueryParser#xq}.
 	 * @param ctx the parse tree
@@ -306,4 +314,10 @@ public interface XQueryVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitCondNot(XQueryParser.CondNotContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link XQueryParser#tList}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTList(XQueryParser.TListContext ctx);
 }
