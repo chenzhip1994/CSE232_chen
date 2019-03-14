@@ -1,5 +1,4 @@
-// Generated from C:/Users/54440/Documents/CSE232_Project/CSE232_chen/src/main/java/Antlr\XQuery.g4 by ANTLR 4.7.2
-package Antlr;
+package Antlr;// Generated from XQuery.g4 by ANTLR 4.7.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -400,6 +399,18 @@ public class XQueryBaseListener implements XQueryListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterTList(XQueryParser.TListContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTList(XQueryParser.TListContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterForClause(XQueryParser.ForClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -539,18 +550,6 @@ public class XQueryBaseListener implements XQueryListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCondNot(XQueryParser.CondNotContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTList(XQueryParser.TListContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTList(XQueryParser.TListContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

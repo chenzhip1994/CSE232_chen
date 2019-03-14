@@ -1,4 +1,4 @@
-package Antlr;// Generated from XQuery.g4 by ANTLR 4.7.1
+// Generated from /Users/patrickchen/Desktop/CSE232/Projecct1_mvn/src/main/java/XQuery.g4 by ANTLR 4.7.1
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.*;

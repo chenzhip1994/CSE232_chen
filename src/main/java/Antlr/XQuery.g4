@@ -1,5 +1,5 @@
 grammar XQuery;
-//import XPath;
+
 
 ap
 	: doc '/' rp                  # ApChildren
@@ -54,8 +54,11 @@ xq
     | '<' NAME '>' '{' xq '}' '</' NAME '>'                                    # XqTag
     | letClause xq                                                             # XqLet
     | forClause letClause? whereClause? returnClause                           # XqFLWR
-    | 'join' '(' xq ',' xq ',' tList ',' tList ')'                           # XqJoin
+    | 'join' '(' xq ',' xq ',' tList ',' tList ')'                             # XqJoin
     ;
+
+//tag list of join
+tList : '[' NAME (',' NAME)* ']' ;
 
 // For Clause
 forClause
@@ -95,4 +98,3 @@ StringConstant: '"' (~'"')* '"';
 Variable: '$' NAME;
 // Ignore White Space
 WhiteSpace: [ \n\t\r]+ -> skip;
-tList : '[' NAME (',' NAME)* ']' ;

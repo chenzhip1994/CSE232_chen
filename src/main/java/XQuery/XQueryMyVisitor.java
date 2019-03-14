@@ -1,15 +1,13 @@
 package XQuery;
 
-import java.util.*;
-
 import Antlr.XQueryBaseVisitor;
 import Antlr.XQueryParser;
-import org.antlr.v4.runtime.tree.TerminalNode;
-import org.w3c.dom.*;
-import XPath.*;
-import sun.awt.image.ImageWatched;
+import XPath.XPathUtils;
+import org.w3c.dom.Node;
 
 import javax.xml.parsers.ParserConfigurationException;
+import java.util.HashMap;
+import java.util.LinkedList;
 
 
 public class XQueryMyVisitor extends XQueryBaseVisitor<LinkedList<Node>> {
@@ -803,7 +801,7 @@ The following part is the xpath function
         for(String nt:Nt){
             for(Node child:children){
                 if(child.getNodeName().equals(nt)){
-                    key += xUtils.convertNodeToHtml(child);
+                    key += child.getFirstChild().getTextContent();
                 }
             }
         }

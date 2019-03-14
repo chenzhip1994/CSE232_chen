@@ -1,6 +1,9 @@
 package XQuery;
+import Antlr.XQueryOptLexer;
+import Antlr.XQueryOptParser;
 import Antlr.XQueryParser;
 import Antlr.XQueryLexer;
+import XQueryRewriter.XQueryRewriterVisitor;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -29,17 +32,26 @@ public class XQueryTestApp {
     }
     public void run(String[] args){
         String inputFilePath = "input.txt";
+        boolean optimizeOpen = false;
         if(args.length > 0){
-            inputFilePath = args[0];
+            optimizeOpen = true;
         }else{
             System.out.println("use default input file, input.txt");
         }
+        System.out.println("input file:" +inputFilePath);
+        System.out.println("Optimizer Open:"+optimizeOpen);
         try {
             System.out.println("input file: "+ inputFilePath);
             FileInputStream input = null;
             input = new FileInputStream(inputFilePath);
             ANTLRInputStream antlrStr = new ANTLRInputStream (input);
-            LinkedList<Node> res = doQuery(antlrStr);
+            LinkedList<Node> res ;
+            if(optimizeOpen){
+                String optimizedQuery = optimizeQuery(antlrStr);
+                res = doQuery(optimizedQuery);
+            }else{
+                res = doQuery(antlrStr);
+            }
             generateResultFile(res);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -48,6 +60,28 @@ public class XQueryTestApp {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public String optimizeQuery(ANTLRInputStream ANTLRInput){
+        XQueryOptLexer xQueryLexer = new XQueryOptLexer(ANTLRInput);
+        CommonTokenStream tokens = new CommonTokenStream(xQueryLexer);
+        XQueryOptParser xQueryParser = new XQueryOptParser(tokens);
+        ParseTree xPathTree = xQueryParser.xq();
+        XQueryRewriterVisitor myVisitor = new XQueryRewriterVisitor();
+        String optString = myVisitor.visit(xPathTree);
+        System.out.println("----optimized query----");
+        System.out.println(optString);
+        return optString;
+    }
+
+    public  LinkedList<Node> doQuery(String inputStr) throws ParserConfigurationException {
+        XQueryLexer xQueryLexer = new XQueryLexer(new ANTLRInputStream(inputStr));
+        CommonTokenStream tokens = new CommonTokenStream(xQueryLexer);
+        XQueryParser xQueryParser = new XQueryParser(tokens);
+        // Parse using ap (Absolute Path) as root rule
+        ParseTree xPathTree = xQueryParser.xq();
+        XQueryMyVisitor queryMyVisitor = new XQueryMyVisitor();
+        return queryMyVisitor.visit(xPathTree);
     }
 
     public  LinkedList<Node> doQuery(ANTLRInputStream ANTLRInput) throws ParserConfigurationException {
@@ -59,6 +93,7 @@ public class XQueryTestApp {
         XQueryMyVisitor queryMyVisitor = new XQueryMyVisitor();
         return queryMyVisitor.visit(xPathTree);
     }
+
     public void generateResultFile(LinkedList<Node> resLs){
         try {
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
